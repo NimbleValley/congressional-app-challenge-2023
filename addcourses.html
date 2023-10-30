@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEBUG ADD COURSES</title>
+</head>
+
+<body>
+    <h1>This page is used soley for app development.</h1>
+    <form id="form" onsubmit="return false">
+        <input type="text" id="text-input">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="output">Output here...</p>
+    <iframe src="https://www.cedarburg.k12.wi.us/schools/high/services/Course%20Offerings%202023-2024.pdf" height="750" width="1000">
+
+    </iframe>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", function () {
+            let string = document.getElementById("text-input").value;
+            document.getElementById("text-input").value = "";
+
+            let courseName = "";
+            let courseNumber;
+            let courseCredits = 1;
+            let globalScholars = string.includes("¤");
+            let writtenConsent = string.includes("→");
+
+            let prerequisites = "";
+            if(string.includes("◊")) {
+                prerequisites = "TODO: FIGURE THESE OUT";
+            }
+
+            let lowerNameBound;
+
+            for (let i = 0; i < 5; i++) {
+                if (!isNaN(string.substring(i, i + 1)) && string.substring(i, i + 1) != " ") {
+                    courseNumber = string.substring(i, i + 4);
+                    lowerNameBound = i+5;
+                    break;
+                }
+            }
+
+            for(let i = 0; i < string.length; i ++) {
+                if(string.substring(i, i + 1) == "X") {
+                    courseName = string.substring(lowerNameBound, i - 3);
+                    break;
+                }
+            }
+
+            if(string.includes("½")) {
+                courseCredits = 0.5;
+            }
+
+            document.getElementById("output").innerText = `
+            {
+                "courseName": "${courseName}",
+                "courseNumber": "${courseNumber}",
+                "credits": ${courseCredits},
+                "gradesOffered": [ FILL THIS IN ],
+                "prerequisites": [ ${prerequisites} ],
+                "globalScholars": ${globalScholars},
+                "requiresWrittenConsent": ${writtenConsent},
+                "ap": ${string.includes("AP")},
+                "honors": ${string.includes("Honors")}
+            }
+            `;
+        });
+    </script>
+</body>
+
+</html>

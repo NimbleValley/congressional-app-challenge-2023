@@ -1,0 +1,452 @@
+html,
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+}
+
+:root {
+    --text: #00101a;
+    --background: #f5f5f5;
+    --primary: #fa973b;
+    --secondary: #333333;
+    --accent: #E53846;
+    --math: #082D62;
+    --computer-science: #082D62;
+}
+
+::selection {
+    /* Change highlight background color to black */
+    background: var(--primary);
+    /* Change highlight text color to red */
+    color: var(--secondary);
+}
+
+/* GENERAL STYLING */
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 8vw;
+    user-select: none;
+    margin: 2vh;
+    margin-top: 5vh;
+    padding: 0vh 5vh 0vh 5vh;
+    color: var(--primary);
+    position: relative;
+    z-index: 10;
+    width: 60vw;
+    height: 12vw;
+    text-align: center;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondary);
+    left: 0;
+    top: 0;
+    z-index: -2;
+    animation: slide-in 1s;
+}
+
+@keyframes slide-in {
+    0% {
+        width: 0%;
+        left: 50%;
+    }
+
+    100% {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+h2 {
+    font-size: 5vh;
+    margin: 2vh;
+    width: fit-content;
+    padding: 0vh 2vh 0vh 2vh;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.25s;
+}
+
+h2:hover {
+    cursor: pointer;
+    color: var(--secondary);
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: var(--primary);
+    left: 0;
+    bottom: 10%;
+    transition: height 0.35s;
+    z-index: -1;
+}
+
+.page-active::after {
+    height: 5%;
+}
+
+h2:hover::after {
+    height: 85%;
+}
+
+h3 {
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    color: #f7f4f4;
+    margin: 0;
+}
+
+h4 {
+    font-size: 4vh;
+    margin: 0;
+    margin-right: 5vh;
+    color: var(--text);
+    width: 100vw;
+    text-align: center;
+}
+
+#chat-box-welcome::after {
+    content: "";
+    background-color: var(--background);
+    position: absolute;
+    width: 100vw;
+    z-index: 1000;
+    top: 10vh;
+    left: 0;
+    animation: h4Fade 3.5s;
+}
+
+@keyframes h4Fade {
+    0% {
+        height: 50vh;
+    }
+    100% {
+        height: 0vh;
+    }
+}
+
+button {
+    font-size: 8vh;
+    padding: 0.25vw 2vw 0.25vw 2vw;
+    background-color: var(--background);
+    border: 0.75vh solid #FA973B;
+    transition: background-color 0.15s ease-in-out, scale 0.3s ease-in-out, color 0.4s ease-in-out, border 0.25s;
+    position: relative;
+    scale: 1;
+    border-radius: 0vh;
+    color: var(--text);
+    user-select: none;
+}
+
+button:hover {
+    cursor: pointer;
+    scale: 1.1;
+    color: var(--background);
+    border: 0.75vh solid #FA973B;
+}
+
+button::after {
+    border-radius: 1000vh;
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, left 0.2s ease-in-out, top 0.2s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.2s ease-in-out;
+    z-index: -5;
+}
+
+button:hover::after {
+    background-color: #FA973B;
+    width: 105%;
+    height: 105%;
+    left: -2.5%;
+    top: -2.5%;
+    border-radius: 0vh;
+}
+
+select {
+    font-size: 3vh;
+    font-family: 'Poppins', sans-serif;
+    margin-right: 2vh;
+    padding: 0.5vh;
+    border: solid 0.5vh var(--primary);
+    border-radius: 0vh;
+    background-color: var(--secondary);
+    color: var(--background);
+    transition: color 0.25s, background-color 0.25s;
+    user-select: none;
+}
+
+select:hover {
+    cursor: pointer;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+.home-background{
+    background-image:url(GuidanceGuruBackground.svg);
+    height:100vh;
+}
+option {
+    font-size: 2.75vh;
+}
+
+p {
+    color: #f7f4f4;
+    font-size: 2.5vh;
+    margin: 1vh;
+}
+
+/* OTHER MAIN FEATURES */
+
+#footer {
+    position: absolute;
+    width: 100vw;
+    height: 3.5vh;
+    background-color: var(--text);
+    bottom: 0;
+    color: var(--background);
+    text-align: center;
+    font-size: 2vh;
+    padding-top: 0.5vh;
+}
+
+.vertical-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontal-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* HOME SCREEN */
+
+#home-screen-container {
+    width: 100vw;
+    height: 95vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.home-page-buttons {
+    width: 30vh;
+    margin-bottom: 5vh;
+}
+
+#day-night-button {
+    margin-right: 3.5vh;
+    width: 7vh;
+    height: 7vh;
+    font-size: 5vh;
+    padding: 0;
+    line-height: 6vh;
+    color: var(--primary);
+    border-color: var(--primary);
+    background-color: transparent;
+}
+
+#day-night-button:hover {
+    color: var(--secondary);
+}
+
+#day-night-button::after {
+    background-color: var(--primary);
+}
+
+/* COURSE GUIDE SCREEN */
+
+#course-card-container {
+    position: absolute;
+    top: 10vh;
+    width: 100vw;
+    left: -100vw;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+#filters-container {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    width: 95vw;
+    justify-content: end;
+    position: sticky;
+    top: 9vh;
+    background-color: var(--background);
+    border: 0.5vh solid var(--secondary);
+    padding: 0.5vh;
+    z-index: 10;
+}
+
+#course-guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary);
+    color: var(--background);
+    height: 8.5vh;
+    user-select: none;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 10;
+}
+
+#filter-button {
+    font-size: 3.0vh;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0;
+    padding: 0.5vh 2vh 0.5vh 2vh;
+    border: solid 0.5vh var(--primary);
+    border-radius: 0.0vh;
+    color: var(--background);
+    background-color: var(--secondary);
+    transition: color 0.15s, background-color 0.15s;
+}
+
+#filter-button:hover {
+    cursor: pointer;
+    scale: 1;
+    color: var(--secondary);
+}
+
+#filter-button::after {
+    border-radius: 1000vh;
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, left 0.2s ease-in-out, top 0.2s ease-in-out, background-color 0.4s ease-in-out, border-radius 0.1s ease-in-out;
+    z-index: -5;
+}
+
+#filter-button:hover::after {
+    background-color: var(--primary);
+    width: 101%;
+    height: 101%;
+    left: -0.5%;
+    top: -0.5%;
+    border-radius: 0vh;
+}
+
+.course-overview-card {
+    background-color: var(--math);
+    width: 30vh;
+    max-width: 45vw;
+    min-width: 30vh;
+    height: 30vh;
+    margin-top: 5vh;
+    border: solid 0.5vh var(--secondary);
+    transition: filter 0.5s;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2.75vh;
+    align-items: center;
+    transition: flex-grow 0.5s;
+}
+
+.course-overview-card-hoverable:hover {
+    cursor: pointer;
+    filter: brightness(1.75);
+}
+
+#prerequisite-container {
+    height: 35vh;
+    width: 90vw;
+    background-color: #333333;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    padding-top: 5vh;
+}
+
+#prerequisite-container::before {
+    content: "- Prerequisite Tree -";
+    position: absolute;
+    color: white;
+    font-size: 5vh;
+    top: 0vw;
+    background-color: #333333;
+}
+
+.arrow-right:after {
+    position: absolute;
+    content: "→";
+    color: white;
+    font-size: 2vh;
+    right: -1vh;
+    top: 35%;
+}
+
+#back-to-courses-button {
+    position: absolute;
+    left: 2vh;
+    top: 0;
+    font-size: 5vh;
+    margin: solid 1vh var(--primary);
+    background-color: transparent;
+    color: var(--background);
+}
+
+#back-to-courses-button:hover {
+    scale: 1;
+    color: var(--secondary);
+}
+
+/* CHAT BOT */
+
+#chat-bot-container {
+    width: 100vw;
+    position: absolute;
+    top: 10vh;
+    display: flex;
+    left: 0vw;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+}
+
+#counsler-textbox {
+    width: 67.25vw;
+    height: 96%;
+    transform: translate(0%, -15%);
+    scale: 1.5;
+    right: 0;
+    filter: contrast(0.92);
+}
+
+#chat-iframe-container {
+    position: relative;
+    height: 115%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}

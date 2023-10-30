@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="course-guide-header">
+        <div class="horizontal-container">
+            <h2 id="home-screen-button" onclick="window.open('index.html', '_self')">Home</h2>
+            <h2 id="chat-screen-button" class="page-active" onclick="toChatScreen()">Chat</h2>
+            <h2 id="course-screen-button" onclick="toCourseScreen()">Course Guide</h2>
+        </div>
+        <button id="day-night-button" onclick="toggleTheme()">☀︎</button>
+    </div>
+
+    <div id="course-card-container">
+        <div id="filters-container">
+            <h4>Filters:</h4>
+            <select id="department-filter">
+            </select>
+            <button id="filter-button">Filter</button>
+        </div>
+
+    </div>
+
+    <div id="chat-bot-container">
+        <h4 id="chat-box-welcome">Welcome to the Guidance Guru, your own virtual counsler!</h4>
+        <div id="chat-iframe-container">
+            <iframe allow="microphone;" width="350" height="430" id="counsler-textbox"
+                src="https://console.dialogflow.com/api-client/demo/embedded/432bd3b1-f3ff-497d-a84a-407327b60341">
+            </iframe>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/course.js"></script>
+</body>
+
+</html>

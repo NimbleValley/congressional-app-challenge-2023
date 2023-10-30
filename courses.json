@@ -1,0 +1,538 @@
+{
+    "schoolName": "Jon Doe High School",
+    "courseTypes": [
+        ["all", "#082D62"],
+        ["art", "#082D62"],
+        ["business", "#082D62"],
+        ["computer science", "#082D62"],
+        ["PhyEd", "#082D62"],
+        ["math", "#661E1E"],
+        ["music", "#082D62"],
+        ["science", "#082D62"],
+        ["social studies", "#082D62"]
+    ],
+    "courses": {
+        "computer science": [
+            {
+                "courseName": "Intro to Block-Base Programming",
+                "courseNumber": "2610",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Intro to Text-Base Programming",
+                "courseNumber": "2620",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2610,
+                    2110
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "App Development",
+                "courseNumber": "2621",
+                "credits": 0.5,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2620
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Physical Computing",
+                "courseNumber": "2622",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2620
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Game Design",
+                "courseNumber": "2623",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2620
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "AP Computer Science A",
+                "courseNumber": "2630",
+                "credits": 1,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2620
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": true,
+                "honors": false
+            },
+            {
+                "courseName": "AP Computer Science Principles",
+                "courseNumber": "8580",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2139
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": true,
+                "honors": false
+            },
+            {
+                "courseName": "Cybersecurity",
+                "courseNumber": "8590",
+                "credits": 0.5,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2620
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            }
+        ],
+        "english": [
+            {
+                "courseName": "Composition/ Literature 9",
+                "courseNumber": "1110",
+                "credits": 1,
+                "gradesOffered": [
+                    9
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Honors Composition/ Literature 9",
+                "courseNumber": "1130",
+                "credits": 1,
+                "gradesOffered": [
+                    9
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": true
+            }
+        ],
+        "math": [
+            {
+                "courseName": "Algebra I",
+                "courseNumber": "2105",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Accelerated Algebra I",
+                "courseNumber": "2110",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Algebra Support",
+                "courseNumber": "2135",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": true,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Honors Algebra I",
+                "courseNumber": "2139",
+                "credits": 1,
+                "gradesOffered": [
+                    9
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": true,
+                "ap": false,
+                "honors": true
+            },
+            {
+                "courseName": "Honors Geometry",
+                "courseNumber": "2140",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10
+                ],
+                "prerequisites": [
+                    2139
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": true,
+                "ap": false,
+                "honors": true
+            },
+            {
+                "courseName": "Geometry",
+                "courseNumber": "2210",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2105
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Accelerated Geometry",
+                "courseNumber": "2220",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2110
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Honors Algebra II With Trigonometry",
+                "courseNumber": "2250",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10
+                ],
+                "prerequisites": [
+                    2140
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": true
+            },
+            {
+                "courseName": "Algebra II",
+                "courseNumber": "2330",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2210
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Accelerated Algebra II",
+                "courseNumber": "2340",
+                "credits": 1,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2220
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Principles of College Algebra",
+                "courseNumber": "2410",
+                "credits": 0.5,
+                "gradesOffered": [
+                    12
+                ],
+                "prerequisites": [
+                    2340
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Probability & Statistics",
+                "courseNumber": "2420",
+                "credits": 0.5,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2330
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "College Trigonometry/ Pre-Calculus",
+                "courseNumber": "2425",
+                "credits": 1,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2330
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Trigonometry",
+                "courseNumber": "2430",
+                "credits": 0.5,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2330
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Pre-Calculus",
+                "courseNumber": "2441",
+                "credits": 0.5,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2330
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "AP Statistics",
+                "courseNumber": "2510",
+                "credits": 1,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2330
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": true,
+                "honors": false
+            },
+            {
+                "courseName": "Introduction to Calculus",
+                "courseNumber": "2525",
+                "credits": 1,
+                "gradesOffered": [
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2250
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "AP Calculus AB",
+                "courseNumber": "2535",
+                "credits": 1,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2525
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": true,
+                "honors": false
+            },
+            {
+                "courseName": "AP Calculus BC",
+                "courseNumber": "2540",
+                "credits": 1,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2525
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": true,
+                "honors": false
+            },
+            {
+                "courseName": "College Calculus III",
+                "courseNumber": "2550",
+                "credits": 1,
+                "gradesOffered": [
+                    11,
+                    12
+                ],
+                "prerequisites": [
+                    2540
+                ],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            },
+            {
+                "courseName": "Global Mathmatics",
+                "courseNumber": "2705",
+                "credits": 0.5,
+                "gradesOffered": [
+                    9,
+                    10,
+                    11,
+                    12
+                ],
+                "prerequisites": [],
+                "globalScholars": false,
+                "requiresWrittenConsent": false,
+                "ap": false,
+                "honors": false
+            }
+        ],
+        "science": [],
+        "social studies": [],
+        "world languages": [],
+        "art": [],
+        "music": [],
+        "business": [],
+        "consumer science": [],
+        "tech ed": [],
+        "PhyEd": []
+    }
+}
